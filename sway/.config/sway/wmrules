@@ -1,0 +1,9 @@
+# Windows Rules 
+for_window [app_id="imv"] floating enable, border pixel 3
+for_window [title="Authenticate"] resize set height 210px
+for_window [app_id="dolphin" window_type="utility"] floating enable
+for_window [title="win0"] floating enable
+for_window [app_id="pavucontrol"] floating enable, sticky enable, resize set width 550 px height 600px, move position cursor, move down 330
+for_window [app_id="blueman-manager"] floating enable, sticky enable, resize set width 550 px height 600px, move position cursor, move down 330, move left 100
+for_window [shell="xdg_shell"] title_format "%title (%app_id)"
+for_window [shell="x_wayland"] title_format "%class - %title"

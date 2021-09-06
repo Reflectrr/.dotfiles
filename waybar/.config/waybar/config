@@ -1,0 +1,107 @@
+{
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["sway/window"],
+  "modules-right": [
+    "pulseaudio",
+    "disk",
+    "memory",
+    "cpu",
+    "backlight",
+    "network",
+    "bluetooth",
+    "idle_inhibitor",
+    "battery",
+    "clock",
+    "custom/power"
+  ],
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "format": "{name}: {icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+    }
+  },
+  "sway/window": {
+    "max-length": 70,
+    "tooltip": false,
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "memory":{
+    "interval": 10,
+    "format": " {}%",
+  },
+  "disk":{
+    "format": " {percentage_used}%"
+  },
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "format-alt": "{:%A, %B %d}",
+    "tooltip-format": "<small>{:%F}</small>",
+  },
+  "cpu": {
+    "interval": 10,
+    "format": " {usage}%",
+    "tooltip": true,
+  },
+  "bluetooth": {
+    "format": "{icon}",
+    "interval": 30,
+    "format-icons": {
+      "enabled": "",
+      "disabled": " disabled"
+    },
+    "on-click": "blueman-manager"
+  },
+  "backlight": {
+    "format": " {percent}%",
+    "scroll-step": 1,
+    "on-scroll-up": "brillo -A 5 -u 200000",
+    "on-scroll-down": "brillo -U 5 -u 200000",
+  },
+  "battery": {
+    "interval": 10,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "interval": 60,
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "default": "",
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "on-scroll-up": "pamixer -ui 2 && pamixer --get-volume > $SWAYSOCK.wob",
+    "on-scroll-down": "pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob",
+  },
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout",
+    "tooltip": false
+  },
+}

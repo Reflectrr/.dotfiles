@@ -1,0 +1,24 @@
+#!/bin/sh
+for i in *; 
+do
+	case "$i" in
+		deploy|*.sh|scripts|yay|*.lst) 
+      ;;
+    xorg)
+      sudo stow -t /etc/X11/xorg.conf.d xorg;
+      ;;
+    sddm)
+      [ ! -d "/etc/sddm.conf.d" ] && sudo mkdir /etc/sddm.conf.d;
+      sudo stow -t /etc/sddm.conf.d sddm;
+      ;;
+    reflector)
+      sudo mv ./reflector/reflector.conf /etc/xdg/reflector/reflector.conf
+      ;;
+    backlight)
+      sudo stow -t /etc/udev/rules.d/ backlight;
+      ;;
+		* )
+      stow $i 
+      ;;
+	esac
+done
