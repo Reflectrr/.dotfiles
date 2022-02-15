@@ -60,7 +60,7 @@
       "enabled": "",
       "disabled": " disabled"
     },
-    "on-click": "blueman-manager"
+    "on-click": "blueberry"
   },
   "backlight": {
     "format": " {percent}%",
@@ -86,6 +86,7 @@
     "format-disconnected": "Disconnected ⚠",
     "format-alt": "{ifname}: {ipaddr}/{cidr}",
     "interval": 60,
+    "on-click": "nm-connection-editor",
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",

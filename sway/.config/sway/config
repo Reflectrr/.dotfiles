@@ -9,12 +9,14 @@ set $right l
 # Alacritty
 set $term alacritty
 # Wofi
-# set $menu wofi --show run
-set $menu wofi -c ~/.config/wofi/config -I
+set $menu wofi --show run
+#set $menu wofi -c ~/.config/wofi/config -I
 
 ### I/O configuration
 output HDMI-A-1 pos 0 0
 output HDMI-A-1 bg ~/wallpapers/gruvbox.jpg fill
+#output DP-1 pos 0 0
+#output DP-1 bg ~/wallpapers/gruvbox.jpg fill
 output eDP-1 pos 0 1080
 output eDP-1 bg ~/wallpapers/gruvbox.jpg fill
 input * {
@@ -48,9 +50,9 @@ client.urgent           $bg-urgent    $bg-urgent   $text          $bar $bar
 
 ### Idle configuration
 
- exec swayidle -w \
-          timeout 300 'swaylock -f -c 000000' \
-          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+exec swayidle -w \
+          timeout 600 'swaylock -f -c 000000' \
+          timeout 1200 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f -c 000000'
 
 
@@ -84,7 +86,6 @@ workspace 2 output HDMI-A-1
     # Custom bindings
     bindsym ctrl+alt+delete exec wlogout -p layer-shell
     bindsym $mod+c exec google-chrome-stable
-    bindsym $mod+p exec clion-eap
     bindsym $mod+n exec flash_window
 
 ### Navigation
@@ -155,7 +156,7 @@ workspace 2 output HDMI-A-1
     bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+a focus parent
+    bindsym $mod+p focus parent
 
 ### Resizing containers
 mode "resize" {
@@ -198,6 +199,7 @@ bar {
 
 ### Autostart
 exec flashfocus
+exec sudo laptop_mode
 
 ### Window formatting
 #default_border none

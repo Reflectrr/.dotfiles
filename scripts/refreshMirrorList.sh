@@ -1,3 +1,3 @@
 #! /bin/bash
-sudo reflector --save /etc/pacman.d/mirrorlist --protocol https --country "United States" --latest 5 --sort age
+sudo reflector --country "United States" --latest 200 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist
 echo "Mirrorlists refreshed!"
