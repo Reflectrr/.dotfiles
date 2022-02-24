@@ -18,7 +18,7 @@ output HDMI-A-1 bg ~/wallpapers/gruvbox.jpg fill
 #output DP-1 pos 0 0
 #output DP-1 bg ~/wallpapers/gruvbox.jpg fill
 output eDP-1 pos 0 1080
-output eDP-1 bg ~/wallpapers/gruvbox.jpg fill
+output eDP-1 bg ~/wallpapers/chongqing.jpg fill
 input * {
 	xkb_layout "us"
 	xkb_variant "dvorak"
