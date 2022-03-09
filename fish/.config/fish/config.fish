@@ -22,7 +22,7 @@ if status --is-interactive
     abbr --add --global vimw 'nvim --cmd "let mode=\'writing\'"'
     abbr --add --global vimt 'nvim --cmd "let mode=\'latex\'"'
     abbr --add --global vim nvim
-    abbr --add --global ews ssh zijunz6@linux.ews.illinois.edu
+    abbr --add --global ews sshpass -f ~/.dotfiles/password ssh -o StrictHostKeyChecking=no zijunz6@linux.ews.illinois.edu
     abbr --add --global vpn /opt/cisco/anyconnect/bin/vpnui
     abbr --add --global aws ssh -i ~/EC2Tutorial.pem ec2-user@
     abbr --add --global as lc3as
