@@ -1,0 +1,2 @@
+#/bin/bash
+sshfs -o idmap=user zijunz6@linux.ews.illinois.edu:/home/zijunz6/220/mp$1 ~/mp

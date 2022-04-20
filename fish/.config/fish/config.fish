@@ -3,7 +3,8 @@ set -x _JAVA_AWT_WM_NONREPARENTING 1
 set -x PATH $PATH ~/.dotfiles/scripts ~/.local/bin
 set -x LD_LIBRARY_PATH $LD_LIBRARY_PATH /usr/lib/
 set -x EDITOR $EDITOR nvim
-set -g theme_color_scheme gruvbox
+set -x theme_color_scheme gruvbox
+set -x FZF_DEFAULT_COMMAND rg --files
 
 # Abbreviations
 if status --is-interactive
@@ -22,10 +23,12 @@ if status --is-interactive
     abbr --add --global vimw 'nvim --cmd "let mode=\'writing\'"'
     abbr --add --global vimt 'nvim --cmd "let mode=\'latex\'"'
     abbr --add --global vimf nvim ~/.config/fish/config.fish
+    abbr --add --global vims nvim ~/.config/sway/config
     abbr --add --global vim nvim
     abbr --add --global ews sshpass -f ~/.dotfiles/password ssh -o StrictHostKeyChecking=no zijunz6@linux.ews.illinois.edu
     abbr --add --global vpn /opt/cisco/anyconnect/bin/vpnui
     abbr --add --global aws ssh -i ~/EC2Tutorial.pem ec2-user@
     abbr --add --global as lc3as
     abbr --add --global sim lc3sim-tk
+    abbr --add --global yay paru
 end
