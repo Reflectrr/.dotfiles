@@ -5,6 +5,7 @@ set -x LD_LIBRARY_PATH $LD_LIBRARY_PATH /usr/lib/
 set -x EDITOR $EDITOR nvim
 set -x theme_color_scheme gruvbox
 set -x FZF_DEFAULT_COMMAND rg --files
+set -x FLASK_APP init
 
 # Abbreviations
 if status --is-interactive
@@ -27,7 +28,7 @@ if status --is-interactive
     abbr --add --global vim nvim
     abbr --add --global ews sshpass -f ~/.dotfiles/password ssh -o StrictHostKeyChecking=no zijunz6@linux.ews.illinois.edu
     abbr --add --global vpn /opt/cisco/anyconnect/bin/vpnui
-    abbr --add --global aws ssh -i ~/EC2Tutorial.pem ec2-user@
+    abbr --add --global awssh ssh -i ~/EC2Tutorial.pem ec2-user@
     abbr --add --global as lc3as
     abbr --add --global sim lc3sim-tk
     abbr --add --global yay paru
