@@ -32,6 +32,7 @@ dmenu
 dolphin
 efibootmgr
 egl-wayland
+exa
 fakeroot
 fd
 filelight
@@ -117,7 +118,6 @@ steam
 stow
 sudo
 sway
-swayidle
 texinfo
 texlive-latexextra
 tldr

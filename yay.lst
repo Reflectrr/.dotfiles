@@ -34,6 +34,7 @@ python-pep8
 python-pytest-cache
 python-pytest-pep8
 python-url-normalize
+python2-numpy
 qwt61-multiaxes-svn
 refind-theme-regular-git
 ryzenadj-git
