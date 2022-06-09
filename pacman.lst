@@ -32,6 +32,7 @@ dmenu
 dolphin
 efibootmgr
 egl-wayland
+emacs
 exa
 fakeroot
 fd
@@ -53,6 +54,8 @@ groff
 grub
 hid-tools
 htop
+i3-gaps
+i3status
 imv
 intel-ucode
 kate
@@ -75,6 +78,7 @@ neofetch
 neovim
 network-manager-applet
 networkmanager
+nitrogen
 nodejs
 noto-fonts-emoji
 npm
@@ -108,6 +112,8 @@ ranger
 refind
 reflector
 ripgrep
+rofi
+rust-src
 rx_tools
 sddm
 sddm-kcm
@@ -138,6 +144,7 @@ which
 wl-clipboard
 wlroots
 wofi
+xcape
 xorg-xeyes
 xorg-xhost
 yarn
