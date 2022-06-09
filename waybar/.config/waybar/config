@@ -8,7 +8,7 @@
     "cpu",
     "backlight",
     "network",
-    "bluetooth",
+    /*"bluetooth",*/
     "idle_inhibitor",
     "battery",
     "clock",
