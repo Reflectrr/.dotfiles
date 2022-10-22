@@ -1,11 +1,11 @@
 stylesheet=/home/bobby/.config/wofi/style.css
 hide_scroll=true
 show=drun,run
-width=420
+width=1000
 lines=17
 line_wrap=word
 term=foot
-location=top_left
+#location=top_left
 allow_markup=true
 always_parse_args=true
 show_all=true
