@@ -1,11 +1,12 @@
 # Environment variables
 set -x _JAVA_AWT_WM_NONREPARENTING 1
-set -x PATH $PATH ~/.dotfiles/scripts ~/.local/bin
+set -x PATH $PATH ~/.dotfiles/scripts ~/.local/bin /opt/cuda/bin
 set -x LD_LIBRARY_PATH $LD_LIBRARY_PATH /usr/lib/
 set -x EDITOR $EDITOR nvim
 set -x theme_color_scheme gruvbox
 set -x FZF_DEFAULT_COMMAND rg --files
 set -x FLASK_APP init
+set -x WLR_DRM_NO_MODIFIERS 1
 
 # Abbreviations
 if status --is-interactive

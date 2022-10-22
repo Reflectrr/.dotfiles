@@ -14,12 +14,15 @@ set $menu wofi --show run
 
 ### I/O configuration
 output HDMI-A-1 pos 0 0
-#output HDMI-A-1 transform 270
-output HDMI-A-1 bg ~/wallpapers/chongqing.jpg fill
-#output DP-1 pos 0 0
+output HDMI-A-1 scale 1.4
+output HDMI-A-1 bg ~/wallpapers/scifi.jpg fill
+#output DP-1 pos 1080 0
 #output DP-1 bg ~/wallpapers/gruvbox.jpg fill
-output eDP-1 pos 0 1080
+#output eDP-1 pos 800 2160
+output eDP-1 pos 0 1543
 output eDP-1 bg ~/wallpapers/scifi.jpg fill
+#focus_follows_mouse yes
+
 input * {
 	xkb_layout "us"
 	xkb_variant "dvorak"
@@ -60,6 +63,7 @@ client.urgent           $bg-urgent    $bg-urgent   $text          $bar $bar
 # Workspaces
 workspace 1 output HDMI-A-1
 workspace 2 output HDMI-A-1
+#workspace 5 output DP-1
 
 ### Key bindings
     # Start a terminal
@@ -188,6 +192,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # Screen brightness
 bindsym XF86MonBrightnessUp exec sudo brillo -A 5 -u 200000
 bindsym XF86MonBrightnessDown exec sudo brillo -U 5 -u 200000
+bindsym print exec --no-startup-id slurp | grim -g - $(~/Screenshots)/$(date +'screenshot_%Y-%m-%d-%H%M%S.png')
 
 ### Status Bar:
 bar {

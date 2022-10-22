@@ -8,7 +8,7 @@
     "cpu",
     "backlight",
     "network",
-    /*"bluetooth",*/
+    "bluetooth",
     "idle_inhibitor",
     "battery",
     "clock",
@@ -54,12 +54,9 @@
     "tooltip": true,
   },
   "bluetooth": {
-    "format": "{icon}",
+    "format-connected": "",
+    "format-off": " disconnect",
     "interval": 30,
-    "format-icons": {
-      "enabled": "",
-      "disabled": " disabled"
-    },
     "on-click": "blueberry"
   },
   "backlight": {
