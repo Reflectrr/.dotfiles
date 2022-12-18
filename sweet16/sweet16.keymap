@@ -1,0 +1,76 @@
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
+#define BASE 0
+#define BLUETOOTH 1
+#define ARROW 2
+#define CHANGE 3
+
+/ {
+        keymap {
+                compatible = "zmk,keymap";
+
+                default_layer {
+// --------------------------
+// | 7 |  8  |  9  | e |
+// | 4 |  5  |  6  |   |
+// | 1 |  2  |  3  | - |
+// |    0    |  .  |   |
+                        bindings = <
+   &kp N7 &kp N8    &kp N9  &kp D
+   &kp N4 &kp N5    &kp N6  &none
+   &kp N1 &kp N2    &kp N3  &lt CHANGE SINGLE_QUOTE
+   &none  &kp N0    &kp E   &none
+                        >;
+                };
+
+                lower_layer {
+// ------------------------
+// |BASE |     |     |     |
+// |BTCLR|     |     |     |
+// | BT1 | BT2 | BT3 |BASE |
+// |     |     |     |     |
+                        bindings = <
+   &to BASE     &none        &none        &none
+   &bt BT_CLR   &none        &none        &none 
+   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &to BASE
+   &none        &none        &none        &none
+                        >;
+                };
+
+                upper_layer {
+// ------------------------
+// |BASE |     |     |     |
+// |     | UP  |     |     |
+// |LEFT |DOWN |RIGHT|BASE |
+// |     |     |     |     |
+                        bindings = <
+   &to BASE     &none        &none        &none
+   &none        &kp UP       &none        &none 
+   &kp LEFT     &kp DOWN     &kp RIGHT    &to BASE
+   &none        &none        &none        &none 
+                        >;
+                };
+
+                change_layer {
+// ------------------------
+// |BASE |     |     |ENTER|
+// |ARROW|     |     |     |
+// |BSPC |     |     |     |
+// |    BT     |     |     |
+                        bindings = <
+   &to BASE     &none         &none        &kp ENTER
+   &to ARROW    &none         &none        &none 
+   &kp BSPC     &none         &none        &none 
+   &none        &to BLUETOOTH &none        &none 
+                        >;
+                };
+        };
+};
