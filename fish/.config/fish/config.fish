@@ -1,22 +1,23 @@
 # Environment variables
 set -x _JAVA_AWT_WM_NONREPARENTING 1
-set -x PATH $PATH ~/.dotfiles/scripts ~/.local/bin /opt/cuda/bin
+set -x PATH $PATH ~/.dotfiles/scripts ~/.local/bin /opt/cuda/bin ~/.local/share/gem/ruby/3.0.0/bin
 set -x LD_LIBRARY_PATH $LD_LIBRARY_PATH /usr/lib/
 set -x EDITOR $EDITOR nvim
 set -x theme_color_scheme gruvbox
 set -x FZF_DEFAULT_COMMAND rg --files
 set -x FLASK_APP init
 set -x WLR_DRM_NO_MODIFIERS 1
+set -x WLR_NO_HARDWARE_CURSORS 1
 
 # Abbreviations
 if status --is-interactive
     abbr --add --global ga git add .
     abbr --add --global gc git commit -m
-    abbr --add --global gg "git add . && git commit -m \"automated message\" && git push origin master"
+    abbr --add --global gg "git add . && git commit -m \"automated message\" && git push origin main"
     abbr --add --global gs git status
     abbr --add --global gl git log
-    abbr --add --global gpom git push origin master
-    abbr --add --global gppom git pull origin master
+    abbr --add --global gpom git push origin main
+    abbr --add --global gppom git pull origin main
     abbr --add --global ls ls -la
     abbr --add --global q exit
     abbr --add --global c clear

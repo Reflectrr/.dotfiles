@@ -54,6 +54,11 @@ window#waybar {
   padding: 0px 10px;
 }
 
+#bluetooth,
+#idle_inhibitor,
+#network{
+  color: @fg
+}
 #pulseaudio {
   color: @red;
 }
