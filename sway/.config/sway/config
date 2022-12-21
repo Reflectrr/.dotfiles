@@ -6,8 +6,7 @@ set $left h
 set $down j
 set $up k
 set $right l
-# Alacritty
-set $term alacritty
+set $term kitty
 # Wofi
 set $menu wofi --show run
 #set $menu wofi -c ~/.config/wofi/config -I
@@ -21,7 +20,7 @@ set $menu wofi --show run
 #output eDP-1 pos 0 1543
 #output eDP-1 pos 0 0
 #output eDP-1 bg ~/wallpapers/scifi.jpg fill
-output * bg ~/wallpapers/scifi.jpg fill
+output * bg ~/wallpapers/gruvbox.jpg fill
 output * adaptive_sync on
 #focus_follows_mouse yes
 
