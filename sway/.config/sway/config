@@ -13,14 +13,16 @@ set $menu wofi --show run
 #set $menu wofi -c ~/.config/wofi/config -I
 
 ### I/O configuration
-output HDMI-A-1 pos 0 0
-output HDMI-A-1 scale 1.4
-output HDMI-A-1 bg ~/wallpapers/scifi.jpg fill
+#output HDMI-A-1 pos 0 0
+#output HDMI-A-1 scale 1.4
+#output HDMI-A-1 bg ~/wallpapers/scifi.jpg fill
 #output DP-1 pos 1080 0
 #output DP-1 bg ~/wallpapers/gruvbox.jpg fill
-output eDP-1 pos 0 1543
+#output eDP-1 pos 0 1543
 #output eDP-1 pos 0 0
-output eDP-1 bg ~/wallpapers/scifi.jpg fill
+#output eDP-1 bg ~/wallpapers/scifi.jpg fill
+output * bg ~/wallpapers/scifi.jpg fill
+output * adaptive_sync on
 #focus_follows_mouse yes
 
 input * {
@@ -192,7 +194,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # Screen brightness
 bindsym XF86MonBrightnessUp exec sudo brillo -A 5 -u 200000
 bindsym XF86MonBrightnessDown exec sudo brillo -U 5 -u 200000
-bindsym print exec --no-startup-id grim -g "$(slurp -d)" - | wl-copy
+bindsym print exec --no-startup-id grim -g "$(slurp -d)" - > ~/Screenshots/screenshot.png | wl-copy
 
 ### Status Bar:
 bar {
@@ -207,6 +209,7 @@ bar {
 exec flashfocus
 exec sudo laptop_mode
 exec redshift -P -O 4500
+exec kanshi
 #exec pamixer --set-volume 30 && pamixer --get-volume > $SWAYSOCK.wob
 #exec mpv --fullscreen --no-input-default-bindings --no-config --on-all-workspaces ~/Videos/rick.mp4
 ### Window formatting

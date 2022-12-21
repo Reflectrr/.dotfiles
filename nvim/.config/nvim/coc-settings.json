@@ -1,0 +1,8 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["python"],
+  "python.linting.enabled": false,
+  "eslint.autoFixOnSave": true,
+  "javascript.suggestionActions.enabled": false,
+  "clangd.path": "/home/bobby/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd",
+  "python.venvPath": "./venv"
+}
