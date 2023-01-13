@@ -17,6 +17,7 @@ if status --is-interactive
     abbr --add --global gs git status
     abbr --add --global gl git log
     abbr --add --global gpom git push origin main
+    abbr --add --global gpoms git push origin master
     abbr --add --global gppom git pull origin main
     abbr --add --global ls ls -la
     abbr --add --global q exit
