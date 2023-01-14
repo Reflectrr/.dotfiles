@@ -51,7 +51,7 @@ return require('packer').startup(function(use)
   use('L3MON4D3/LuaSnip')
   use('saadparwaiz1/cmp_luasnip')
   -- extra
-  use('reflectrr/leetcode.vim')
+  use('Reflectrr/leetcode.vim')
   use "pangloss/vim-javascript"
   use "maxmellon/vim-jsx-pretty"
 
