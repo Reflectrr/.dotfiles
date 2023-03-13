@@ -200,7 +200,7 @@ bar {
 ### Autostart
 exec flashfocus
 exec sudo laptop_mode
-exec redshift -P -O 3500
+exec gammastep -P -O 3500
 exec kanshi
 #exec pamixer --set-volume 30 && pamixer --get-volume > $SWAYSOCK.wob
 #exec mpv --fullscreen --no-input-default-bindings --no-config --on-all-workspaces ~/Videos/rick.mp4

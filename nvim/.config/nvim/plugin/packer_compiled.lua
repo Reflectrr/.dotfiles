@@ -128,7 +128,7 @@ _G.packer_plugins = {
   ["leetcode.vim"] = {
     loaded = true,
     path = "/home/bobby/.local/share/nvim/site/pack/packer/start/leetcode.vim",
-    url = "https://github.com/reflectrr/leetcode.vim"
+    url = "https://github.com/Reflectrr/leetcode.vim"
   },
   ["lualine.nvim"] = {
     loaded = true,
